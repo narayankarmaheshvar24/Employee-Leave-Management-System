@@ -1,0 +1,166 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Employee Leave Management</title>
+</head>
+
+<body>
+
+<!-- LOGIN -->
+<div class="login-container">
+
+    <h1>Employee Leave Management</h1>
+    <p>Login to your account</p>
+
+    <form id="loginForm">
+
+        <label for="username">Username</label>
+        <input type="text" id="username"
+               placeholder="Enter username" required>
+
+        <label for="password">Password</label>
+        <input type="password" id="password"
+               placeholder="Enter password" required>
+
+        <button type="submit">Login</button>
+        <p id="message"></p>
+
+    </form>
+</div>
+
+
+<!-- MAIN DASHBOARD -->
+<div id="dashboard" style="display: none;">
+
+    <h1 id="dashboardTitle">Employee Dashboard</h1>
+    <p>Welcome to Employee Leave Management System!</p>
+
+
+    <!-- EMPLOYEE PROFILE -->
+    <div id="profileSection">
+
+        <h2>My Profile</h2>
+
+        <p><strong>Name:</strong>
+            <span id="employeeName">Loading...</span>
+        </p>
+
+        <p><strong>Email:</strong>
+            <span id="employeeEmail">Loading...</span>
+        </p>
+
+        <p><strong>Department:</strong>
+            <span id="employeeDepartment">Loading...</span>
+        </p>
+
+        <div class="leave-balance-card">
+            <h3>Remaining Leave Balance</h3>
+            <h1><span id="leaveBalance">--</span> Days</h1>
+        </div>
+
+    </div>
+
+
+    <!-- STATISTICS -->
+    <div class="stats-container">
+
+        <div class="stat-card total-card">
+            <h3>Total Requests</h3>
+            <h1 id="totalLeaves">0</h1>
+        </div>
+
+        <div class="stat-card pending-card">
+            <h3>Pending</h3>
+            <h1 id="pendingLeaves">0</h1>
+        </div>
+
+        <div class="stat-card approved-card">
+            <h3>Approved</h3>
+            <h1 id="approvedLeaves">0</h1>
+        </div>
+
+        <div class="stat-card rejected-card">
+            <h3>Rejected</h3>
+            <h1 id="rejectedLeaves">0</h1>
+        </div>
+
+    </div>
+
+
+    <!-- EMPLOYEE BUTTONS -->
+    <div id="employeeActions" class="dashboard-buttons">
+
+        <button id="applyLeaveBtn">Apply Leave</button>
+
+        <button id="myLeavesBtn">My Leave Requests</button>
+
+    </div>
+
+
+    <!-- ADMIN BUTTONS -->
+    <div id="adminActions" class="dashboard-buttons"
+         style="display: none;">
+
+        <button id="allRequestsBtn">All Leave Requests</button>
+
+        <button id="manageEmployeesBtn">Manage Employees</button>
+
+    </div>
+
+
+    <!-- DASHBOARD CONTENT -->
+    <div id="dashboardContent">
+
+        <!-- APPLY LEAVE FORM -->
+        <div id="applyLeaveForm" style="display: none;">
+
+            <h2>Apply for Leave</h2>
+
+            <form id="leaveForm">
+
+                <label for="startDate">Start Date</label>
+                <input type="date" id="startDate" required>
+
+                <label for="endDate">End Date</label>
+                <input type="date" id="endDate" required>
+
+                <label for="leaveType">Leave Type</label>
+
+                <select id="leaveType" required>
+                    <option value="">Select Leave Type</option>
+                    <option value="CASUAL">Casual Leave</option>
+                    <option value="SICK">Sick Leave</option>
+                    <option value="EARNED">Earned Leave</option>
+                </select>
+
+                <label for="reason">Reason</label>
+
+                <textarea id="reason"
+                          placeholder="Enter reason for leave"
+                          required></textarea>
+
+                <button type="submit">Submit Leave Request</button>
+
+            </form>
+
+            <p id="leaveMessage"></p>
+
+        </div>
+
+    </div>
+
+
+    <!-- LOGOUT -->
+    <button id="logoutBtn">Logout</button>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

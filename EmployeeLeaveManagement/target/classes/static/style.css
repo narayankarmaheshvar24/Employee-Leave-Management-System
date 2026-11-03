@@ -1,0 +1,375 @@
+
+/* =========================
+   GLOBAL STYLES
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    padding: 35px 20px;
+    background: #f4f7fc;
+    color: #1e293b;
+}
+
+/* =========================
+   DASHBOARD
+========================= */
+
+#dashboard {
+    display: none;
+    width: 100%;
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 35px;
+    background: #ffffff;
+    border: 1px solid #e8edf5;
+    border-radius: 18px;
+    box-shadow: 0 12px 40px rgba(15, 23, 42, 0.07);
+}
+
+#dashboard h1 {
+    color: #172554;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+#dashboard > p {
+    color: #64748b;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+/* =========================
+   PROFILE SECTION
+========================= */
+
+#profileSection {
+    background: linear-gradient(120deg, #eff6ff, #e9edff);
+    padding: 25px;
+    border-radius: 14px;
+    margin-bottom: 25px;
+    border: 1px solid #dbeafe;
+}
+
+#profileSection h2 {
+    color: #1e40af;
+    font-size: 20px;
+    margin-bottom: 18px;
+}
+
+#profileSection p {
+    margin: 10px 0;
+    font-size: 14px;
+    color: #334155;
+}
+
+.leave-balance-card {
+    margin-top: 20px;
+    padding: 18px 22px;
+    background: #ffffff;
+    border-radius: 12px;
+    display: inline-block;
+    min-width: 190px;
+    box-shadow: 0 4px 15px rgba(30, 64, 175, 0.08);
+}
+
+.leave-balance-card h3 {
+    color: #64748b;
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.leave-balance-card h1 {
+    color: #2563eb !important;
+    font-size: 27px !important;
+}
+
+/* =========================
+   STATISTICS CARDS
+========================= */
+
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin: 25px 0;
+}
+
+.stat-card {
+    background: #ffffff;
+    padding: 22px;
+    border-radius: 13px;
+    border: 1px solid #e8edf5;
+    border-left: 4px solid #2563eb;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
+    transition: 0.25s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+}
+
+.stat-card h3 {
+    font-size: 13px;
+    font-weight: 600;
+    color: #64748b;
+    margin-bottom: 12px;
+}
+
+.stat-card h1 {
+    font-size: 29px !important;
+    margin: 0 !important;
+}
+
+.total-card {
+    border-left-color: #2563eb;
+}
+
+.total-card h1 {
+    color: #2563eb !important;
+}
+
+.pending-card {
+    border-left-color: #f59e0b;
+}
+
+.pending-card h1 {
+    color: #d97706 !important;
+}
+
+.approved-card {
+    border-left-color: #16a34a;
+}
+
+.approved-card h1 {
+    color: #16a34a !important;
+}
+
+.rejected-card {
+    border-left-color: #dc2626;
+}
+
+.rejected-card h1 {
+    color: #dc2626 !important;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+button {
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    background: #2563eb;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    margin: 6px 6px 6px 0;
+    transition: 0.25s ease;
+}
+
+button:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(37, 99, 235, 0.18);
+}
+
+#logoutBtn {
+    background: #475569;
+}
+
+#logoutBtn:hover {
+    background: #334155;
+}
+
+.dashboard-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+/* =========================
+   LOGIN
+========================= */
+
+.login-container {
+    width: 100%;
+    max-width: 420px;
+    margin: 80px auto;
+    padding: 35px;
+    background: #ffffff;
+    border: 1px solid #e8edf5;
+    border-radius: 16px;
+    box-shadow: 0 12px 35px rgba(15, 23, 42, 0.08);
+}
+
+.login-container h1,
+.login-container h2 {
+    color: #1e40af;
+    margin-bottom: 20px;
+}
+
+/* =========================
+   FORMS
+========================= */
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 13px 14px;
+    margin: 8px 0 18px;
+    border: 1px solid #d5deeb;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    background: #ffffff;
+    color: #1e293b;
+    transition: 0.2s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.10);
+}
+
+label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #334155;
+    margin-top: 8px;
+}
+
+/* =========================
+   DASHBOARD CONTENT
+========================= */
+
+#dashboardContent {
+    margin-top: 28px;
+    overflow-x: auto;
+}
+
+#dashboardContent h2 {
+    color: #1e40af;
+    font-size: 21px;
+    margin-bottom: 18px;
+}
+
+/* =========================
+   TABLE
+========================= */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 18px;
+    background: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th {
+    background: #1e40af;
+    color: #ffffff;
+    padding: 15px;
+    text-align: left;
+    font-size: 13px;
+}
+
+td {
+    padding: 14px;
+    border-bottom: 1px solid #e8edf5;
+    font-size: 14px;
+}
+
+tr:hover td {
+    background: #f8fafc;
+}
+
+/* =========================
+   MESSAGES
+========================= */
+
+#message,
+#leaveMessage {
+    margin-top: 12px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 800px) {
+    .stats-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #dashboard {
+        padding: 25px;
+    }
+}
+
+@media (max-width: 500px) {
+    body {
+        padding: 10px;
+    }
+
+    #dashboard {
+        padding: 18px;
+        margin: 8px auto;
+    }
+
+    #dashboard h1 {
+        font-size: 23px;
+    }
+
+    .stats-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .stat-card {
+        padding: 15px;
+    }
+
+    .stat-card h1 {
+        font-size: 23px !important;
+    }
+
+    .login-container {
+        margin: 35px auto;
+        padding: 24px;
+    }
+
+    button {
+        padding: 11px 14px;
+    }
+
+    .leave-balance-card {
+        width: 100%;
+    }
+
+    #dashboardContent {
+        overflow-x: auto;
+    }
+
+    table {
+        min-width: 600px;
+    }
+}
